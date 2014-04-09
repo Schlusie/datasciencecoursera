@@ -36,6 +36,21 @@ line break
 im doing `plot(lm(cars))` now  
 or just
 ```
-plot(lm(cars))
+#with ````
+ggplot(cars, aes(x=speed, y=dist)) + geom_point() + geom_smooth() + theme_bw()
 ```
+    # with double tab (4 spaces)
+    png("lmcars.png")
+    ggplot(cars, aes(x=speed, y=dist)) + geom_point() + geom_smooth() + theme_bw()
+    dev.off()
+
+now plotting it
+
+![plot(cars)][id1]
+
+[id1]: lmcars.png "Title of the plot"
+
+
+
+
 
